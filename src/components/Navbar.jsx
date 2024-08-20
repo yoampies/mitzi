@@ -4,9 +4,7 @@ export default function Navbar(props) {
     const {setSection} = props
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f5f0f2] px-10 py-3">
-        <button onClick={() => {
-                setSection('home')
-            }}>
+        <button href='/'>
             <div className="flex items-center gap-4 text-[#181013]">
                 <div className="size-4">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,9 +27,7 @@ export default function Navbar(props) {
         </button>
         <div className="flex flex-1 justify-end gap-8">
         <div className="flex items-center gap-9">
-            <button className="text-[#181013] text-sm font-medium leading-normal" onClick={() => {
-                setSection('services')
-            }}>
+            <button className="text-[#181013] text-sm font-medium leading-normal" href='/servicios'>
             Servicios
             </button>
             <button className="text-[#181013] text-sm font-medium leading-normal" onClick={() => {

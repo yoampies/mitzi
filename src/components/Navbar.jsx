@@ -1,10 +1,11 @@
 import React from 'react'
+import {NavLink} from "react-router-dom";
 
 export default function Navbar(props) {
     const {setSection} = props
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f5f0f2] px-10 py-3">
-        <button href='/'>
+        <NavLink to="/">
             <div className="flex items-center gap-4 text-[#181013]">
                 <div className="size-4">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,22 +25,18 @@ export default function Navbar(props) {
             </div>
             <h2 className="text-[#181013] text-lg font-bold leading-tight tracking-[-0.015em]">Mimi's Therapy</h2>
             </div>
-        </button>
+        </NavLink>
         <div className="flex flex-1 justify-end gap-8">
         <div className="flex items-center gap-9">
-            <button className="text-[#181013] text-sm font-medium leading-normal" href='/servicios'>
+            <NavLink className="text-[#181013] text-sm font-medium leading-normal" to="/servicios">
             Servicios
-            </button>
-            <button className="text-[#181013] text-sm font-medium leading-normal" onClick={() => {
-                setSection('contact')
-            }}>
+            </NavLink>
+            <NavLink className="text-[#181013] text-sm font-medium leading-normal" to="/contacto">
             Contacto y Citas
-            </button>
-            <button className="text-[#181013] text-sm font-medium leading-normal" onClick={() => {
-                setSection('blog')
-            }}>
+            </NavLink>
+            <NavLink className="text-[#181013] text-sm font-medium leading-normal" to="/blog">
             Blog
-            </button>
+            </NavLink>
         </div>
         <div className="flex gap-2">
             <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#ff327d] text-white text-sm font-bold leading-normal tracking-[0.015em]">
